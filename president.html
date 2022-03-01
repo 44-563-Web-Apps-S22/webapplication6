@@ -14,7 +14,7 @@
     <label for="input_2">Guess the president</label>
     <input type ="text" id="input_2" name="form1_nick" autofocus> <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess">
+    <input type="button" onclick="checkGuess()" value="Check the guess" >
 </form>
 
 
@@ -39,6 +39,34 @@ function checkGuess(){
     }
 }
 </script>
-
+<div>
+    <img src="Purple gallinule.jpg" id="bird_img" height="100px" width="100px" onclick="swapImage()">
+</div>
+<script>
+var useImage=1
+function swapImage(){
+    switch(useImage)
+    {
+       case 1:
+       {
+          document.getElementById("bird_img").src="Abbott's babbler.jpg"
+          useImage=2
+          break
+       }
+       case 2:
+       {
+          document.getElementById("bird_img").src="Troupial.jpg"
+          useImage=3
+          break
+       }
+       case 3:
+       {
+          
+          document.getElementById("bird_img").src="Purple gallinule.jpg"
+          break
+       }
+    }
+}
+</script>
 </body>
 </html> 
