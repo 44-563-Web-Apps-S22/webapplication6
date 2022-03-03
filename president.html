@@ -2,19 +2,27 @@
 <html>
  <head>
      <title>President Information</title>
- </head>
-<body>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-<h2>President guess by Dwithi Reddy</h2>
+ </head>
+<body style="background-color: rgb(178, 233, 107);">
+    <h1 style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">President guess by Dwithi Reddy</h1>
 
 <form>
     <label for="input_1"> Enter the secret president name</label>
-    <input type ="password" id="input_1" value="George Washington" > <br>
+    <input class="form-control-sm" type ="password" id="input_1" value="George Washington" > <br>
 
     <label for="input_2">Guess the president</label>
-    <input type ="text" id="input_2" name="form1_nick" autofocus> <br>
+    <input class="form-control-sm" type ="text" id="input_2" name="form1_nick" autofocus> <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess" >
+    <input type="button" onclick="checkGuess()" value="Check the guess" class="btn-primary"  >
 </form>
 
 
@@ -39,8 +47,7 @@ function checkGuess(){
     }
 }
 </script>
-<div>
-    <img src="Purple gallinule.jpg" id="bird_img" height="100px" width="100px" onclick="swapImage()">
+<div><img src="Purple gallinule.jpg" id="bird_img" height="100px" width="100px" onclick="swapImage()">
 </div>
 <script>
 var useImage=1
