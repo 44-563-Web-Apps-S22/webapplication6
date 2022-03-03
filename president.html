@@ -31,20 +31,29 @@
 <script> 
 var correct=0
 var wrong=0
+var count=0
 function checkGuess(){
-    //console.log("Getting form values")
-    secret_president = document.getElementById("input_1").value
-    guess = document.getElementById("input_2").value
-    out = document.getElementById("result")
-        if(secret_president==guess){
-            correct++;
-           alert("You got it right")
-           out.innerHTML = "Correct count:"+correct+"   Wrong count:"+wrong
-         } else {
-            wrong++;
-            alert("Wrong President")
-            out.innerHTML = "Correct count:"+correct+"   Wrong count:"+wrong
-    }
+secret= document.getElementById("input_1").value
+guess= document.getElementById("input_2").value
+out = document.getElementById("result")
+if(secret==guess)
+{
+    correct++;
+    alert("You got it right")
+    out.innerHTML = "Correct count:"+correct+"  Wrong count:"+wrong
+    count=0
+}else{
+    wrong++;
+    alert("Wrong President")
+    out.innerHTML = "Correct count:"+correct+"  Wrong count:"+wrong
+    count++
+}
+if(count == 3){
+    document.getElementById("in").onclick = lock()
+}
+function lock(){
+    alert("Sorry, game over.")
+}
 }
 </script>
 <div><img src="Purple gallinule.jpg" id="bird_img" height="100px" width="100px" onclick="swapImage()">
